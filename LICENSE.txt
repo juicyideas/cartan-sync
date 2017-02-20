@@ -1,0 +1,21 @@
+The MATLAB implementation of Cartan-Sync contained herein are copyright (C) 2017 by Jesus Briales,
+and are distributed under the terms of the GNU General Public License (GPL) version 3 (or later). 
+See accompanying file COPYING.txt or <http://www.gnu.org/licenses/gpl.html>.
+
+In short, this means that everyone is free to use Cartan-Sync,
+to modify it and to redistribute it on a free basis.
+However, Cartan-Sync is NOT in the public domain;
+it is copyrighted, and there are restrictions on its distribution (see the license).
+For example, you cannot integrate this version of Cartan-Sync (in full or in parts)
+in any closed-source software you plan to distribute (commercially or not).
+Please contact us for more information.
+
+
+Contact: jbriales@uma.es
+
+
+THIRD-PARTY CODE
+
+This distribution of Cartan-Sync contains Manopt, a MATLAB toolbox for optimization on Riemannian manifolds,
+which is made available under its own license.
+Please see the files LICENSE.txt and COPYING.txt in the MATLAB/SE-Sync/manopt directory of this distribution for additional information.
