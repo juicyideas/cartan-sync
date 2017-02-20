@@ -93,6 +93,7 @@ function M = euclideanfactory(m, n)
     M.pairmean = @(x1, x2) .5*(x1+x2); % BM: okay.
     
     M.vec = @(x, u_mat) u_mat(:); % BM: okay.
+    M.veclen = M.dim(); % a constant value
     M.mat = @(x, u_vec) reshape(u_vec, dimensions_vec);% BM: replacing reshape(u_vec, [m, n]);
     M.vecmatareisometries = @() true;
 
