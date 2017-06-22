@@ -53,7 +53,9 @@ ais = 'ais2klinik';
 % 'kitti_09'
 
 % Pick the dataset to run here
-file = 'kitti_00';
+% file = sphere2500;
+file = 'smallGrid3D';
+% file = 'kitti_00';
 g2o_file = fullfile( data_dir, strcat(file,'.g2o') );
 
 %% Read in .g2o file

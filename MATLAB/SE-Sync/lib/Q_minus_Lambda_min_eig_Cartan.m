@@ -77,5 +77,27 @@ end
 [V, shifted_lambda_min] = eigs(MminusLambda_shifted, num_eigs, 'SA', eigs_opts);
 lambdas = shifted_lambda_min - lambda_max*eye(num_eigs);
 
-end
+keyboard
+return
 
+%% Experimenting with BDD property
+% the translation Laplacian is DD (not strictly)
+testBDD(problem_data.LWtau,ones(1,n))
+
+% the rot conn Laplacian is BDD (not strictly)
+testBDD(problem_data.ConLap,d*ones(1,n))
+
+% the conn Laplacian must be BDD? It doesn't seem so
+testBDD(problem_data.ConLapT,(d+1)*ones(1,n))
+testBDD(problem_data.ConLapT,kron(ones(1,n),[d 1]))
+
+% try BDD direct Z=M-Lam
+testBDD(MminusLambda,d+1)
+% HACK: drop zero values for now
+X = Xopt(:,1:3);
+% try BDD of modified candidate solution XX'
+testBDD(X*X',d+1)
+% try BDD of modified Z+XX'
+testBDD(MminusLambda+X*X',d+1)
+testBDD(MminusLambda-X*X',d+1)
+end
